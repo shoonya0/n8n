@@ -1,0 +1,5 @@
+db:
+  dsn: postgres://user:password@localhost:5432/n8n?sslmode=disable
+  maxOpenConns: 25
+  maxIdleConns: 5
+  connMaxLifetime: 30m

@@ -1,5 +1,20 @@
+app:
+  env: development
+  logLevel: debug
+  logFormat: text
+  service: n8n-server
+
 db:
-  dsn: postgres://user:password@localhost:5432/n8n?sslmode=disable
+  dns: postgres://user:password@localhost:5432/n8n?sslmode=disable
   maxOpenConns: 25
   maxIdleConns: 5
   connMaxLifetime: 30m
+
+jwt:
+  alg: RS256
+  privateKeyFile: jwt.rsa
+  publicKeyFile: jwt.rsa.pub
+  accessTTL: 15m
+  refreshTTL: 168h
+  issuer: n8n
+  audience: n8n
